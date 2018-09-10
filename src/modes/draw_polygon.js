@@ -138,4 +138,11 @@ DrawPolygon.onTrash = function(state) {
   this.changeMode(Constants.modes.SIMPLE_SELECT);
 };
 
+DrawPolygon.onRemovePoint = function(state, index) {
+  if (state.currentVertexPosition <= index || index < 0) return;
+
+  state.polygon.removeCoordinate(`0.${index}`);
+  state.currentVertexPosition--;
+};
+
 module.exports = DrawPolygon;

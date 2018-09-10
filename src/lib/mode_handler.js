@@ -62,6 +62,12 @@ const ModeHandler = function(mode, DrawContext) {
         DrawContext.store.render();
       }
     },
+    removePoint: function(index) {
+      if (mode.removePoint) {
+        mode.removePoint(index);
+        DrawContext.store.render();
+      }
+    },
     combineFeatures: function() {
       if (mode.combineFeatures) {
         mode.combineFeatures();
