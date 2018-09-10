@@ -59,6 +59,9 @@ module.exports = function(modeObject) {
       trash: function() {
         mode.onTrash(state);
       },
+      removePoint: function(index) {
+        mode.onRemovePoint(state, index);
+      },
       combineFeatures: function() {
         mode.onCombineFeatures(state);
       },

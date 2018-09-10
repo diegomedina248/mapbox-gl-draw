@@ -252,6 +252,9 @@ module.exports = function(ctx) {
         ctx.container.removeEventListener('keyup', events.keyup);
       }
     },
+    removePoint: function(index) {
+      currentMode.removePoint(index);
+    },
     trash: function(options) {
       currentMode.trash(options);
     },

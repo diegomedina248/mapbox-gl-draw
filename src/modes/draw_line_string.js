@@ -132,6 +132,13 @@ DrawLineString.onTrash = function(state) {
   this.changeMode(Constants.modes.SIMPLE_SELECT);
 };
 
+DrawLineString.onRemovePoint = function(state, index) {
+  if (state.currentVertexPosition <= index || index < 0) return;
+
+  state.line.removeCoordinate(index);
+  state.currentVertexPosition--;
+};
+
 DrawLineString.toDisplayFeatures = function(state, geojson, display) {
   const isActiveLine = geojson.properties.id === state.line.id;
   geojson.properties.active = (isActiveLine) ? Constants.activeStates.ACTIVE : Constants.activeStates.INACTIVE;

@@ -112,6 +112,14 @@ ModeInterface.prototype.onTap = function() {};
 ModeInterface.prototype.onStop = function() {};
 
 /**
+ * Triggered when draw.removePoint(index) is called.
+ * @name MODE.onTrash
+ * @param state {Object} - a mutible state object created by onSetup
+ * @param index the position of the point to remove
+ */
+ModeInterface.prototype.onRemovePoint = function() {};
+
+/**
  * Triggered when [draw.trash()](https://github.com/mapbox/mapbox-gl-draw/blob/master/API.md#trash-draw) is called.
  * @name MODE.onTrash
  * @param state {Object} - a mutible state object created by onSetup

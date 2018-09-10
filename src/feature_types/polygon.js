@@ -39,9 +39,6 @@ Polygon.prototype.removeCoordinate = function(path) {
   const ring = this.coordinates[ids[0]];
   if (ring) {
     ring.splice(ids[1], 1);
-    if (ring.length < 3) {
-      this.coordinates.splice(ids[0], 1);
-    }
   }
 };
 

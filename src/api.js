@@ -168,6 +168,11 @@ module.exports = function(ctx, api) {
     return api;
   };
 
+  api.removePoint = function(index) {
+    ctx.events.removePoint(index);
+    return api;
+  };
+
   api.getMode = function() {
     return ctx.events.getMode();
   };
